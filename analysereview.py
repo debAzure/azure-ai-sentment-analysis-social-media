@@ -6,14 +6,14 @@ from azure.core.credentials import AzureKeyCredential
 from io import StringIO
 
 # Azure Blob Storage credentials
-blob_connection_string = "DefaultEndpointsProtocol=https;AccountName=mytwiterstorage001;AccountKey=a6DkinbvD5wgM5Z1ysz3wHUV7SDicuJyLLas7pM5UTlmAlaLM2zMnoMyTPBcn84if0HDOVuko3vB+ASt6ec1AA==;EndpointSuffix=core.windows.net"
+blob_connection_string = "CONNECTION STRING FOR THE STORAGE ACCOUNT"
 container_name = "twiterdata001"
 source_blob_name = "merch_sales.csv"
 destination_blob_name = "processed_merch_sales.csv"
 
 # Azure Text Analytics credentials
-text_analytics_key = "6jmdIbQuVWoz39itQbuymMX7v1iejhyL8ZG1h6RZXLL4HG5ell0XJQQJ99BBACYeBjFXJ3w3AAAaACOGdhKv"
-text_analytics_endpoint = "https://mytextanalytics001.cognitiveservices.azure.com/"
+text_analytics_key = "TEXT ANALYTICS AI API KEY"
+text_analytics_endpoint = "TEXT ANALYTICS AI API END POINT"
 
 # Initialize the Blob Service client and Text Analytics client
 blob_service_client = BlobServiceClient.from_connection_string(blob_connection_string)
