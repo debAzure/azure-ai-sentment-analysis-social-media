@@ -1,0 +1,24 @@
+Sentiment Analysis Using Azure Cognitive Services (Text Analytics API)
+
+Once reviews are stored in Azure Blob Storage, the next step is to perform sentiment analysis using Azure Cognitive Services, specifically the Text Analytics API. This API uses pre-built models to analyze and assess the sentiment in text data.
+
+A. Setting Up Azure Cognitive Services (Text Analytics API)
+1. Create a Cognitive Services Resource: In the Azure portal, create a new Cognitive Services resource and choose the Text Analytics API option.
+2. Obtain API Key and Endpoint: After setting up the resource, obtain the API Key and Endpoint URL, which will be used to authenticate your API requests.
+
+B. Text Analytics API Features
+The Text Analytics API provides three primary features:
+- Sentiment Analysis: It categorizes text as Positive, Neutral, or Negative and assigns a sentiment score.
+- Entity Recognition: It identifies named entities such as organizations, people, or locations.
+- Language Detection: It detects the language of the provided text.
+
+For this project, we will focus primarily on Sentiment Analysis, which will be used to evaluate the sentiment of customer reviews.
+
+C. Performing Sentiment Analysis with Python
+A Python script will be developed to automate the following tasks:
+1. Fetch Reviews: Retrieve the most recent reviews stored in Azure Blob Storage.
+2. Send to Text Analytics API: Send the reviews to the Text Analytics API for sentiment evaluation.
+3. Store Results: Save the sentiment analysis results (classified as Positive, Neutral, or Negative) in another Blob Storage container (e.g., `processed-reviews`).
+4. Rate Limitation Handling: To comply with API rate limits, the script will process the last 10 reviews and wait for 10 seconds before processing the next set of reviews.
+
+This automated process ensures continuous sentiment analysis of incoming reviews, with results stored in Blob Storage for further analysis and reporting.
